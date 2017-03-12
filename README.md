@@ -1,9 +1,8 @@
 # http-proxy
 反向代理与负载均衡（Java）
-
-- 启动方式
+	- 启动方式
 	-java -jar httpproxy-xxx.jar
-- 配置方式
+	-配置方式
 	-在application.properties里可以配置本地的启动端口
 	-如：server.port=9082，启动本地的9082端口
 	-在loadbalance.properties里可以配置算法类型及需要负载的机器IP，端口及权重，可以支持类型有hash，random，roundRobin，weightHash，weightRandom，weightRoundRobin
