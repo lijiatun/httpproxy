@@ -7,14 +7,17 @@
 	- 如：server.port=9082，启动本地的9082端口
 	- 在loadbalance.properties里可以配置算法类型及需要负载的机器IP，端口及权重，可以支持类型有hash，random，roundRobin，weightHash，weightRandom，weightRoundRobin
 	- 如：两台机器，多台同理
-  	loadbalance.type=hash
+	
+	loadbalance.type=hash
   	loadbalance.servers[0]=192.168.1.100
 	loadbalance.ports[0]=8080
 	loadbalance.weights[0]=4
+	
 	loadbalance.servers[1]=192.168.1.101
 	loadbalance.ports[1]=8080
 	loadbalance.weights[1]=1
-    - 类型说明
+	
+   - 类型说明
 	- hash（源地址哈希法）
 	  - 源地址哈希的思想是根据获取客户端的IP地址，通过哈希函数计算得到的一个数值，用该数值对服务器列表的大小进行取模运算，得到的结果便是客服端要访问服务器的序号。采用源地址哈希法进行负载均衡，同一IP地址的客户端，当后端服务器列表不变时，它每次都会映射到同一台后端服务器进行访问。
 	  - 源地址哈希法是通过客户端的ip也就是remoteIp，取得它的Hash值，对服务器列表的大小取模，结果便是选用的服务器在服务器列表中的索引值。
