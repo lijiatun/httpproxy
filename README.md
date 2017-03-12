@@ -9,12 +9,17 @@
 	- 如：两台机器，多台同理
 	
 	loadbalance.type=hash
+	
   	loadbalance.servers[0]=192.168.1.100
+	
 	loadbalance.ports[0]=8080
+	
 	loadbalance.weights[0]=4
 	
 	loadbalance.servers[1]=192.168.1.101
+
 	loadbalance.ports[1]=8080
+	
 	loadbalance.weights[1]=1
 	
    - 类型说明
